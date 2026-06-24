@@ -23,7 +23,7 @@ services:
         - VITE_FIREBASE_API_KEY=AIzaSyC_D7GrxhCxQ9GI6YoYLVC0x1NsIhCezQk
         - VITE_FIREBASE_AUTH_DOMAIN=fyp-erp-system.firebaseapp.com
         - VITE_FIREBASE_PROJECT_ID=fyp-erp-system
-        - VITE_API_URL=http://localhost:8000
+        - VITE_API_URL=https://invigorating-reverence-production-fcec.up.railway.app
     ports:
       - "80:80"
     depends_on:
