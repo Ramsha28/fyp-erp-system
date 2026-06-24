@@ -4,5 +4,4 @@ dist
 .env.local
 *.log
 .DS_Store
-backend/serviceAccountKey.json
-backend/.env
+
