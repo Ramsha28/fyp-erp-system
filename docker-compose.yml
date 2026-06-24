@@ -9,10 +9,10 @@ services:
       - "8000:8000"
     environment:
       - PORT=8000
-      - MONGODB_URI=mongodb+srv://fyp-user:SafePass123@fyp-erp-cluster.abcde.mongodb.net/fyp-erp-db?retryWrites=true&w=majority
+      - MONGODB_URI=mongodb+srv://fyp-user:SafePass123@fyp-erp-cluster.wfbzmsp.mongodb.net/?appName=fyp-erp-cluster
       - FIREBASE_PROJECT_ID=fyp-erp-system
-      - FIREBASE_CLIENT_EMAIL=firebase-adminsdk-xxxxx@fyp-erp-system.iam.gserviceaccount.com
-      - FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQ...\n-----END PRIVATE KEY-----\n"
+      - FIREBASE_CLIENT_EMAIL=firebase-adminsdk-fbsvc@fyp-erp-system.iam.gserviceaccount.com
+      - FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDxIzZUIwasV+3c\naNyPjIQCUxdzy7upxw/qJ+3MklDA6mtCogJChpeh6/UJYQ8Bz3l3Luvhvy3X6xDZ\nswXEasN38kGDHMUxnePzJTsKAvhV6CKY/qr73o4KssTbtJ0eKdfLHbJcmqMzQevu\nMGNHxCDMd4A0VX6cEC7sbT5zYwMtZGpxzZKgQIQg/HZ3zCzCbQh35WaOec6VhoQq\n5lD+Qy6I2ZQtZNZiio9u6n0tkpllD7LiCXTlQnW11KvaaqhhYJvJ5aZTh6dWY3bR\n7EfCN7qucdRrBzTdCiMnzk4xMSNBRt4Q3mPv/e9kq2jtgbZzCZMadrvTVzklpnpr\nPSszw457AgMBAAECggEAAWyGzppiWLQwOGP6IXLf+K+K7OkgE5GUW3qe4d1fUrRP\nq9YPE1t+G7ur98E1+HnEKtsBE5UwbRz7PX3cI9vJibTJhD+wPmnDRdVLcvSviLpV\nMfgXBGO9DP0fQnjfkKUInC9xtTBIlG3oOcDZZTwYQXzXKffzRnKmBElk3AOSqjrx\noo6DxBOlCOBVVe2ufvQi4auxxnvLw1e5WZMmYqwyM5AHg1I7m5QNIs6ns5cBbsjT\n1WLRDbJZNgZU0QvLPq9JfqVYUx5jbi1qXwvhK/n1NEwYxPTeQHLkWj35XW5kul2A\nyBkd23yGhVykrcdW8+Ov+ARn2TIs2qO3/lK4puHUEQKBgQD+gexFvbZyAGhTnCdH\n2Cvq36JM+P58ptNkCL36x2e+RUeco8wUDlrgQNtWOU32XFu1NIGe5d6+0OSkbLrY\ngtZo4Uz7k/PtIWAbK5RjOxqcmrwSUPNEqIOY2FFM+i79JXl0nnMWfbhxZpztPx1q\nEC2G4qCXS7s5+0ewY+6YiuM4swKBgQDyjTe+RX4XExrxEol99meXcDDxxrdacLFY\nKcPQtXrxanIqPbFIE5W+fOpu5T9UdFrw99mSL2m6ncxpvfxad6fY/TV2LuYNLoAE\nsBmRRjN9KgB2p+DdeTnwF7TUoFizKt0w0mdc7GU9PXOqXlaVqTdtp2HOzGO8eghg\nKTtn7LFnGQKBgQCSLfmRTRffftBtRYFiSI1hCDXmVBWHbyJ3kHXd9m5l4NDy7Tmo\nQ15684WHjr5yxDWAbLoOlCVOIBlTP4hKF0wjTVS0IxS1nLfgozVFkYsFa/Kd6pTv\nWILNZWG8/u3CRKXwD5o2ztsDd1anBdtVMhmUIdLvU3YkJWnVrHA8eXls9QKBgQC9\nBjUFAZ9MWEVMzod8NQVyTaq3IYhO4Tg0XwgNpQEVF0G1jbKVWz3939fLaLk8Fhmx\nZVaXyH97QfLGDZuW3V1fi6WYXuBGMZDvFlY2kyEZUBxgXGCv+QOgCrmQYw39Q1Bx\n9ec70bbsTPHROgf8Ro291Q4yXbL0dZ4FYty7FwkCMQKBgDeOwx8Y6Wrx83hr0Ylk\ns5ppO/ysHoWrNin0zcEN1a+ccCSroAjhRuBMwU9RZ78kEAnBAR2hCF1c1aE/s3HW\naVKeLJvT5TXmBI8YX8d9JwXsO79wbCX16yoOwXN4T4/evMFNhsmlgG0+Fv2jBPOi\nb0nxpw573Ka4TGATV4rHgkKO\n-----END PRIVATE KEY-----\n"
     restart: always
 
   frontend:
@@ -20,7 +20,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        - VITE_FIREBASE_API_KEY=AIzaSyA1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q
+        - VITE_FIREBASE_API_KEY=AIzaSyC_D7GrxhCxQ9GI6YoYLVC0x1NsIhCezQk
         - VITE_FIREBASE_AUTH_DOMAIN=fyp-erp-system.firebaseapp.com
         - VITE_FIREBASE_PROJECT_ID=fyp-erp-system
         - VITE_API_URL=http://localhost:8000
